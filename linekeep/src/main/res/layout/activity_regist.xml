@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cn.linekeep.pangu.vcan.ui.RegistActivity">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#47A0CA">
+
+            <ImageView
+                android:id="@+id/iv_regist_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:onClick="Regist"
+                android:src="@drawable/back" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="注册"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+
+    </RelativeLayout>
+
+    <EditText
+        android:textColorHint="#ffdddddd"
+        android:id="@+id/et_regist_username"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="170dp"
+        android:hint="请输入你的手机号" />
+
+
+    <EditText
+        android:textColorHint="#ffdddddd"
+        android:id="@+id/et_regist_passward"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_regist_username"
+        android:layout_centerHorizontal="true"
+        android:hint="请输入你的密码" />
+
+    <EditText
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/et_regist_passward"
+        android:id="@+id/et_password_again"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/login_email_hint"
+        android:inputType="textPassword"
+        android:paddingLeft="15dip"
+        android:textColorHint="#ffdddddd" />
+
+    <Button
+        android:id="@+id/bt_regist"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/et_regist_passward"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:background="#6A7D8F"
+        android:onClick="Regist"
+        android:text="注册" />
+</RelativeLayout>

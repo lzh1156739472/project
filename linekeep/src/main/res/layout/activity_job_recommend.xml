@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cn.linekeep.pangu.vcan.ui.JobRecommendActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_job_amend"
+        android:background="#6A7D8F"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+        <ImageView
+            android:id="@+id/iv_job_amend_back"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back"
+            android:layout_width="15dp"
+            android:layout_height="15dp" />
+        <TextView
+            android:textColor="#FFFFFF"
+            android:layout_toRightOf="@+id/iv_job_amend_back"
+            android:layout_marginLeft="5dp"
+            android:layout_centerVertical="true"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:text="修改职位"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/et_job_amend"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/rl_job_amend"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tv_job_amend"
+        android:textSize="12sp"
+        android:layout_below="@id/et_job_amend"
+        android:text="请您使用真实职位,会让您更好的拓展人脉"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/et_job_amend"
+        />
+
+
+    <Button
+        android:id="@+id/bt_job_amend"
+        android:layout_below="@id/tv_job_amend"
+        android:background="#47A0CA"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:text="确定"
+        android:layout_width="80dp"
+        android:layout_height="30dp" />
+
+
+
+</RelativeLayout>

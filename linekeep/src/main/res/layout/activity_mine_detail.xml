@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cn.linekeep.pangu.vcan.ui.MineDetailActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_detail_mine_top"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#47A0CA">
+
+        <RelativeLayout
+            android:id="@+id/rl_detail_mine_infoTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:id="@+id/iv_mine_detail_back"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/iv_mine_detail_back"
+                android:text="修改信息"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+
+        android:id="@+id/rl_detail_mine_photo"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/rl_detail_mine_top"
+        android:layout_marginTop="2dp"
+        android:background="#F2F2F2">
+
+        <ImageView
+            android:id="@+id/iv_mine_detail_amend"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:src="@mipmap/head" />
+
+        <TextView
+            android:id="@+id/tv_mine_detail_amend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30dp"
+            android:text="修改头像"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/sanjiaoxing" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_mine_detail_name"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/rl_detail_mine_photo"
+        android:layout_marginTop="10dp"
+        android:background="#F2F2F2">
+
+        <TextView
+            android:id="@+id/tv_mine_detail_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="38dp"
+            android:text="mmnk"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_mine_detail_job"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/rl_mine_detail_name"
+        android:layout_marginTop="10dp"
+        android:background="#F2F2F2">
+
+
+        <TextView
+            android:id="@+id/tv_mine_detail_job"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:text="国家信息技术安全研究中心项目管理"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

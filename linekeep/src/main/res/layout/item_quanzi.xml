@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/quanzi_touxiang"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:background="@mipmap/head"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+    <TextView
+        android:textStyle="bold"
+        android:id="@+id/tv_quanzi_name"
+        android:layout_marginTop="15dp"
+        android:text="刘泽华"
+        android:layout_alignBaseline="@id/quanzi_touxiang"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/quanzi_touxiang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:layout_marginTop="2dp"
+        android:src="@drawable/duihao"
+        android:layout_marginLeft="7dp"
+        android:layout_alignTop="@id/tv_quanzi_name"
+        android:layout_toRightOf="@id/tv_quanzi_name"
+        android:id="@+id/iv_quanzi_yiguanzhu"
+        android:layout_width="15dp"
+        android:layout_height="15dp" />
+    <TextView
+        android:layout_marginTop="1dp"
+        android:textSize="12sp"
+        android:layout_marginLeft="5dp"
+        android:layout_alignTop="@id/tv_quanzi_name"
+        android:layout_toRightOf="@+id/iv_quanzi_yiguanzhu"
+        android:text="已关注"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_marginTop="2dp"
+        android:layout_alignTop="@id/tv_quanzi_name"
+        android:layout_marginRight="13dp"
+        android:layout_alignParentRight="true"
+        android:text="9:24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/tv_quanzi_name"
+        android:layout_alignLeft="@+id/tv_quanzi_name"
+        android:text="LineKeep创始人"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:lineSpacingMultiplier="1.5"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@id/quanzi_touxiang"
+        android:id="@+id/tv_quanzi_neirong"
+        android:layout_marginTop="10dp"
+        android:text="推进强军事业，必须深入推进军民融合发展，构建军民一体化的国家战略体系和能力。”党的十八大以来，以习近平同志为核心的党中央着眼实现中国梦强军梦，总揽战略全局，把握发展大势，把军民融合发展上升为国家战略，科学统筹经济建设与国防建设，在更广范围、更高层次、更深程度上推进军民融合，努力实现发展和安全兼顾、富国和强军统一。"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/iv_quanzi_tupian"
+        android:scaleType="fitXY"
+        android:src="@drawable/xizhuxi"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/tv_quanzi_neirong"
+        android:layout_width="350dp"
+        android:layout_height="180dp"
+        />
+
+</RelativeLayout>

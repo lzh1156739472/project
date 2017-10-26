@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_huodong_show"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/tv_huodong_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/iv_huodong_show"
+        android:text="主题：共享是生活的和创业最好的存在方式交流会"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_huodong_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tv_huodong_name"
+        android:layout_below="@+id/tv_huodong_name"
+        android:layout_marginTop="5dp"
+        android:text="时间：2017-7-18  13:50"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_huodong_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tv_huodong_name"
+        android:layout_below="@+id/tv_huodong_time"
+        android:layout_marginTop="5dp"
+        android:text="地点：海淀上地"
+        android:textSize="12sp" />
+
+    <Button
+
+        android:layout_marginBottom="10dp"
+        android:layout_width="40dp"
+        android:layout_height="20sp"
+        android:layout_alignBottom="@id/iv_huodong_show"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:background="#169BD5"
+        android:text="报名"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp" />
+</RelativeLayout>
