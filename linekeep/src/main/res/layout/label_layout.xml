@@ -2,7 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+   >
 
     <RelativeLayout
 
@@ -10,7 +12,6 @@
         android:layout_height="match_parent">
 
         <TextView
-
             android:id="@+id/tv_label_aditor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -22,7 +23,7 @@
         <android.support.v7.widget.RecyclerView
             android:id="@+id/rv_inuse_label"
             android:layout_width="match_parent"
-            android:layout_height="220dp"
+            android:layout_height="250dp"
             android:layout_below="@+id/tv_label_aditor"
             android:layout_marginTop="10dp">
 

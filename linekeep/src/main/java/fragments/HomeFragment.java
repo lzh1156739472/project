@@ -1,15 +1,20 @@
 package fragments;
 
 import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
+import android.widget.LinearLayout;
+import android.widget.PopupWindow;
 import android.widget.TextView;
 
 
@@ -23,41 +28,69 @@ import cn.linekeep.pangu.linekeep.R;
  */
 
 public class HomeFragment extends Fragment {
-    private TabLayout  mTabLayout;
+    private TabLayout mTabLayout;
     private ViewPager mViewPager;
     private String[] mTitle;
     private ArrayList<ModuleFragment> listModelFragment;
     private TextView textView;
+    private LinearLayout ly;
+    PopupWindow popupWindow;
+    private TextView  tuichu;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = View.inflate(getContext(), R.layout.home_fragment,null);
-        View view2 = View.inflate(getContext(),R.layout.label_layout,null);
+        View view = View.inflate(getContext(), R.layout.home_fragment, null);
+        View labelView = View.inflate(getContext(), R.layout.label_layout, null);
+        tuichu = (TextView) labelView.findViewById(R.id.tv_label_aditor);
+        popupWindow = new PopupWindow(labelView, LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.MATCH_PARENT);
+        popupWindow.setBackgroundDrawable(new ColorDrawable());
+        popupWindow.setOutsideTouchable(true);//设置点击外部的时候，窗口也可以消失
+
         initView(view);
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                popupWindow.showAtLocation(ly, Gravity.BOTTOM, 0, 0);
+          //      backgroundAlpha((float) 0.5);
+            }
+        });
+        tuichu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                popupWindow.dismiss();
             }
         });
         return view;
     }
 
+    /**
+     * 设置添加屏幕的背景透明度
+     *
+     * @param bgAlpha
+     */
+    public void backgroundAlpha(float bgAlpha) {
+        WindowManager.LayoutParams lp = getActivity().getWindow().getAttributes();
+        lp.alpha = bgAlpha; //0.0-1.0
+        getActivity().getWindow().setAttributes(lp);
+    }
+
     private void initView(View view) {
         mTabLayout = (TabLayout) view.findViewById(R.id.tb_tl);
         mViewPager = (ViewPager) view.findViewById(R.id.vp_home_news);
-        mTitle=getResources().getStringArray(R.array.tb_name);
+        mTitle = getResources().getStringArray(R.array.tb_name);
         textView = (TextView) view.findViewById(R.id.tv_jiaohao);
+        ly = (LinearLayout) view.findViewById(R.id.popwindow);
+
         listModelFragment = new ArrayList<>();
-        for(int i = 0;i<mTitle.length;i++){
+        for (int i = 0; i < mTitle.length; i++) {
             ModuleFragment moduleFragment = new ModuleFragment();
-            Bundle bundle=new Bundle();
-            bundle.putString("type",mTitle[i]);
+            Bundle bundle = new Bundle();
+            bundle.putString("type", mTitle[i]);
             moduleFragment.setArguments(bundle);
             listModelFragment.add(moduleFragment);
         }
-
-
 
 
         //设置TabLayout与ViewPager的联动
@@ -67,15 +100,14 @@ public class HomeFragment extends Fragment {
         mTabLayout.setSelectedTabIndicatorColor(Color.BLUE);
 
         for (int i = 0; i < mTabLayout.getTabCount(); i++) {
-            TabLayout.Tab tb= mTabLayout.getTabAt(i);//获取对应位置的tab
-          //  tb.setIcon(R.mipmap.ic_launcher);//设置tab的图标
+            TabLayout.Tab tb = mTabLayout.getTabAt(i);//获取对应位置的tab
+            //  tb.setIcon(R.mipmap.ic_launcher);//设置tab的图标
         }
         mTabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 for (int i = 0; i < mTabLayout.getTabCount(); i++) {
-                    if(mTabLayout.getTabAt(i)==tab)
-                    {
+                    if (mTabLayout.getTabAt(i) == tab) {
                         mViewPager.setCurrentItem(i);
                         break;
                     }
@@ -87,14 +119,17 @@ public class HomeFragment extends Fragment {
             public void onTabUnselected(TabLayout.Tab tab) {
 
             }
+
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
 
             }
         });
 
-        VpHomeAdaper vpHomeAdapter = new VpHomeAdaper(getFragmentManager(),listModelFragment,mTitle);
+        VpHomeAdaper vpHomeAdapter = new VpHomeAdaper(getFragmentManager(), listModelFragment, mTitle);
         mViewPager.setAdapter(vpHomeAdapter);
         mViewPager.setCurrentItem(1);
+
+
     }
 }

@@ -140,7 +140,7 @@
         <activity android:name="cn.linekeep.pangu.vcan.ui.JobRecommendActivity" />
         <activity android:name="cn.linekeep.pangu.vcan.ui.LvLiActivity" />
         <activity android:name="cn.linekeep.pangu.vcan.ui.GuanZhuActivity" />
-        <activity android:name="cn.linekeep.pangu.vcan.ui.ShouCangActivity"></activity>
+        <activity android:name="cn.linekeep.pangu.vcan.ui.ShouCangActivity" />
     </application>
 
 </manifest>
