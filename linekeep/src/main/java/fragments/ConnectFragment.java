@@ -63,8 +63,14 @@ public class ConnectFragment extends ParentWithNaviFragment {
 
     @Override
     protected String title() {
-        return "人脉";
+        return "联系人";
     }
+
+    @Override
+    public Object left() {
+        return "联系人";
+    }
+
 
     @Override
     public Object right() {
