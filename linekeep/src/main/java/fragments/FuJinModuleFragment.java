@@ -83,7 +83,6 @@ import bean.imbean.User;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.UpdateListener;
 import cn.linekeep.pangu.linekeep.R;
-import cn.linekeep.pangu.vcan.mapui.RoutePlanDemo;
 import model.UserModel;
 import util.maputils.OverlayManager;
 import util.maputils.WalkingRouteOverlay;
@@ -649,7 +648,7 @@ public class FuJinModuleFragment extends Fragment implements SensorEventListener
             @Override
             public void onClick(View v) {
                 Toast.makeText(getActivity(), "你点击了个textview", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(getActivity(), RoutePlanDemo.class));
+
             }
         });
 

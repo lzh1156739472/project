@@ -41,10 +41,11 @@ public class HomeFragment extends Fragment {
     private TextView textView;
     private LinearLayout ly;
     PopupWindow popupWindow;
-    private TextView  tuichu;
-    private RecyclerView recyclerViewYi,recyclerViewWei;
+    private TextView tuichu;
+    private RecyclerView recyclerViewYi, recyclerViewWei;
     private GridAdapter gridapter;
-    private List<String>  mData;
+    private List<String> mData;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -62,15 +63,17 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 popupWindow.showAtLocation(ly, Gravity.BOTTOM, 0, 0);
-          //      backgroundAlpha((float) 0.5);
+                //      backgroundAlpha((float) 0.5);
                 mData = new ArrayList<>();
-                gridapter = new GridAdapter(getContext(),mData);
+                gridapter = new GridAdapter(getContext(), mData);
 
                 for (int i = 0; i < 100; i++) {
-                    mData.add("标签"+i);
+                    mData.add("标签" + i);
                 }
+
                 setData();
-                gridapter.notifyDataSetChanged();;
+                gridapter.notifyDataSetChanged();
+                ;
 
             }
         });
@@ -85,7 +88,7 @@ public class HomeFragment extends Fragment {
     }
 
     private void setData() {
-        GridLayoutManager manager = new GridLayoutManager(getContext(),5, LinearLayoutManager.VERTICAL,false);
+        GridLayoutManager manager = new GridLayoutManager(getContext(), 5, LinearLayoutManager.VERTICAL, false);
         recyclerViewYi.setLayoutManager(manager);
         recyclerViewYi.setAdapter(gridapter);
     }
@@ -110,7 +113,7 @@ public class HomeFragment extends Fragment {
 
 
         listModelFragment = new ArrayList<>();
-             for (int i = 0; i < mTitle.length; i++) {
+        for (int i = 0; i < mTitle.length; i++) {
             ModuleFragment moduleFragment = new ModuleFragment();
             Bundle bundle = new Bundle();
             bundle.putString("type", mTitle[i]);
