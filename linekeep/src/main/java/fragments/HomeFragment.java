@@ -33,7 +33,7 @@ import cn.linekeep.pangu.linekeep.R;
  */
 
 public class HomeFragment extends Fragment {
-
+//是否有改变
     private TabLayout mTabLayout;
     private ViewPager mViewPager;
     private String[] mTitle;
@@ -119,6 +119,7 @@ public class HomeFragment extends Fragment {
             bundle.putString("type", mTitle[i]);
             moduleFragment.setArguments(bundle);
             listModelFragment.add(moduleFragment);
+
         }
 
 

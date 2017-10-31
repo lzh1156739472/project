@@ -66,10 +66,6 @@ public class ConnectFragment extends ParentWithNaviFragment {
         return "联系人";
     }
 
-    @Override
-    public Object left() {
-        return "联系人";
-    }
 
 
     @Override
@@ -91,6 +87,7 @@ public class ConnectFragment extends ParentWithNaviFragment {
             }
         };
     }
+
 
     @Nullable
     @Override
